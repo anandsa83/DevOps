@@ -17,7 +17,7 @@ STAT $?
 APP_PREREQ
 
 PRINT Copy New Nginx Config FIle
-cp /DevOps/nginx.conf /etc/nginx/nginx.conf &>> $LOG_FILE
+cp /root/DevOps/nginx.conf /etc/nginx/nginx.conf &>> $LOG_FILE
 STAT $?
 
 PRINT Start Nginx Service
