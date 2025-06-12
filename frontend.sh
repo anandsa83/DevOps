@@ -21,7 +21,7 @@ rm /etc/nginx/nginx.conf &>> $LOG_FILE
 STAT $?
 
 PRINT Copy New Nginx Config FIle
-cp nginx.conf /etc/nginx/nginx.conf &>> $LOG_FILE
+cp /DevOps/nginx.conf /etc/nginx/nginx.conf &>> $LOG_FILE
 STAT $?
 
 PRINT Start Nginx Service
