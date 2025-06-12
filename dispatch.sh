@@ -5,10 +5,12 @@ app_path=/app
 
 APP_PREREQ
 
-dnf install golang -y
+PRINT Install Golang
+dnf install golang -y &>> $LOG_FILE
 cd /app 
-go mod init dispatch
-go get 
-go build
+PRINT Configure Golang
+go mod init dispatch &>> $LOG_FILE
+go get &>> $LOG_FILE
+go build &>> $LOG_FILE
 
 SYSTEMD_SETUP
