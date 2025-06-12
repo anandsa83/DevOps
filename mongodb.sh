@@ -1,7 +1,7 @@
 source common.sh
 
 PRINT Copy Mongo Repo FIle
-cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOG_FILE
+cp /root/DevOps/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOG_FILE
 STAT $?
 
 PRINT Install MongoDB
