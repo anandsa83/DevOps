@@ -1,4 +1,4 @@
-source commmon.sh
+source common.sh
 component=frontend
 app_path=/usr/share/nginx/html
 
