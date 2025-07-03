@@ -1,0 +1,7 @@
+app_path: /app
+component: shipping
+schema_setup: mysql
+schema_files:
+  - schema
+  - master-data
+  - app-user

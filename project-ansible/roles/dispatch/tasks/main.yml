@@ -1,0 +1,19 @@
+- name: Configure App Pre-Requsites
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: app-prereq
+
+- name: Install Golang
+  ansible.builtin.dnf:
+    name: golang
+    state: latest
+
+- name: Configure Golang
+  ansible.buitlin.shell: go mod init dispatch; go get ; go build
+  args:
+    chdir: "{{ app_path }}"
+
+- name: Setup systemd
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd
