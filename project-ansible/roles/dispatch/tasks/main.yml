@@ -9,7 +9,7 @@
     state: latest
 
 - name: Configure Golang
-  ansible.buitlin.shell: go mod init dispatch; go get ; go build
+  ansible.buitlin.shell: go mod init dispatch ; go get ; go build
   args:
     chdir: "{{ app_path }}"
 
