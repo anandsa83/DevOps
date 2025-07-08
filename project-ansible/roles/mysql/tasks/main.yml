@@ -1,7 +1,7 @@
 - name: Install MySQL Server
   ansible.builtin.dnf:
-  name: mysql-server
-  state: latest
+    name: mysql-server
+    state: latest
 
 - name: Start MySQL Service
   ansible.builtin.systemd_service:
