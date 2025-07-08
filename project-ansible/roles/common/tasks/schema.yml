@@ -3,13 +3,13 @@
   block:
     - name: Copy MongDB Repo File
       ansible.builtin.template:
-      src: mongo.repo
-      dest: /etc/yum.repos.d/mongo.repo
+        src: mongo.repo
+        dest: /etc/yum.repos.d/mongo.repo
       
     - name: Install MongoDB Client
       ansible.builtin.dnf:
-      name: mongodb-mongosh
-      state: latest
+        name: mongodb-mongosh
+        state: latest
 
     - name: Load Master Data
       ansible.builtin.shell: mongosh --host mongodb.{{ env }}.adevops.click </app/db/{{ item }}.js 
@@ -20,8 +20,8 @@
   block:
    - name: Install MySQL Client
      ansible.builtin.dnf:
-     name: mysql
-     state: latest   
+       name: mysql
+       state: latest   
 
    - name: Load Master Data
      ansible.builtin.shell: mysql -h mysql.{{ env }}.adevops.click -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
