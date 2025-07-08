@@ -8,7 +8,7 @@
     name: golang
     state: latest
 
-- name: Configuration golang
+- name: Download Golang Dependencies
   ansible.buitlin.shell: go mod init dispatch ; go get ; go build
   args:
     chdir: "{{ app_path }}"
