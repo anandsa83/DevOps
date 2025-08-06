@@ -1,0 +1,6 @@
+name: learn-github-actions
+on: [push, workflow_dispatch]
+jobs:
+  runs-on: ubuntu-latest
+    steps:
+      - run: echo Hello
